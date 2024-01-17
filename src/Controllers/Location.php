@@ -11,12 +11,9 @@ class Location extends Controller
 
     public static function MapData($pincode)
     {
-        $id = "jf5lq/YtCj9nDR7yFR6ixGVTRGpyc1U4WnVSYVRaem5aVTZvcm5HQlJSdmtoL2FvbWRvZ2V3dWhYRTJxQnBCN255eXRNTitkUGFuaUZ5dkE=";
-        $key = "secret_key";
-
+        $locationErag = new Location();
         try {
-            $locationErag = new Location();
-            $response = Http::get($locationErag->buildData($id, $key) . $pincode);
+            $response = Http::get($locationErag->buildData($locationErag->key()['id'], $locationErag->key()['key']) . $pincode);
             if ($response->successful()) {
                 return $response->json();
             } else {
@@ -41,5 +38,11 @@ class Location extends Controller
         $data = substr($data, $ivlen);
         $decrypted = openssl_decrypt($data, $cipher, $key, 0, $iv);
         return $decrypted;
+    }
+
+    public function key(){
+        $id = "jf5lq/YtCj9nDR7yFR6ixGVTRGpyc1U4WnVSYVRaem5aVTZvcm5HQlJSdmtoL2FvbWRvZ2V3dWhYRTJxQnBCN255eXRNTitkUGFuaUZ5dkE=";
+        $key = "secret_key";
+        return ['id'=> $id, 'key'=> $key];
     }
 }
