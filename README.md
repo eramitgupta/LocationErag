@@ -1,5 +1,4 @@
 
-<h1 align="center">Get location information only india <h1>
 
 <p align="center">
   <a href="https://paypal.me/teamdevgeek">
@@ -12,9 +11,10 @@
 
 ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
 
+## Getting Started
 
 ```bash
-  composer require erag/locationerag
+composer require erag/locationerag
 ```
 
 ```bash
@@ -39,7 +39,6 @@ Route::get('/', function () {
     echo '<pre>';
     print_r($LocationErag::MapData('226010'));
 });
-
 ```
 ## License
 
