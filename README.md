@@ -4,9 +4,7 @@
   <a href="https://paypal.me/teamdevgeek">
     <img src="https://github.com/eramitgupta/server-commands/blob/main/%24-donate-ff69b4.svg">
   </a>
-  <a href="https://packagist.org/packages/erag/locationerag">
-    <img src="https://github.com/eramitgupta/server-commands/blob/main/badge.svg" alt="packages">
-  </a>
+
   <a>
     <img src="https://github.com/eramitgupta/server-commands/blob/main/framework.svg" alt="License">
   </a>
