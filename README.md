@@ -5,7 +5,10 @@
     <img src="https://github.com/eramitgupta/server-commands/blob/main/%24-donate-ff69b4.svg">
   </a>
   <a href="https://packagist.org/packages/erag/locationerag">
-    <img src="https://github.com/eramitgupta/server-commands/blob/main/badge.svg" alt="License">
+    <img src="https://github.com/eramitgupta/server-commands/blob/main/badge.svg" alt="packages">
+  </a>
+  <a>
+    <img src="https://github.com/eramitgupta/server-commands/blob/main/framework.svg" alt="License">
   </a>
 </p>
 
@@ -45,5 +48,5 @@ Route::get('/', function () {
 The MIT License (MIT). Please see License File for more information.
 
 > GitHub [@eramitgupta](https://github.com/eramitgupta) &nbsp;&middot;&nbsp;
-> Linkedin [@amit_merchant](https://www.linkedin.com/in/eramitgupta/)
+> Linkedin [@eramitgupta](https://www.linkedin.com/in/eramitgupta/)
 
