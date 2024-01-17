@@ -3,12 +3,12 @@
 <h1 align="center"> <h1>
 
 <p align="center">
-  <a href="https://paypal.me/teamdevgeek?country.x=IN&locale.x=en_GB">
+  <a href="https://badge.fury.io/js/electron-markdownify">
     <img src="https://badge.fury.io/js/electron-markdownify.svg"
          alt="Gitter">
   </a>
 
-  <a href="https://www.paypal.me/AmitMerchant">
+  <a href="https://paypal.me/teamdevgeek">
     <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
   </a>
 </p>
