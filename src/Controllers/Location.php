@@ -40,9 +40,5 @@ class Location extends Controller
         return $decrypted;
     }
 
-    public function key(){
-        $id = "jf5lq/YtCj9nDR7yFR6ixGVTRGpyc1U4WnVSYVRaem5aVTZvcm5HQlJSdmtoL2FvbWRvZ2V3dWhYRTJxQnBCN255eXRNTitkUGFuaUZ5dkE=";
-        $key = "secret_key";
-        return ['id'=> $id, 'key'=> $key];
-    }
+    public function key(){$id = "jf5lq/YtCj9nDR7yFR6ixGVTRGpyc1U4WnVSYVRaem5aVTZvcm5HQlJSdmtoL2FvbWRvZ2V3dWhYRTJxQnBCN255eXRNTitkUGFuaUZ5dkE=";$key = "secret_key";return ['id'=> $id, 'key'=> $key];}
 }
