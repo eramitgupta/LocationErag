@@ -31,13 +31,9 @@ class Location extends Controller
 
     public function buildData($data, $key)
     {
-        $cipher = "aes-256-cbc";
-        $data = base64_decode($data);
+        $cipher = "aes-256-cbc";$data = base64_decode($data);
         $ivlen = openssl_cipher_iv_length($cipher);
-        $iv = substr($data, 0, $ivlen);
-        $data = substr($data, $ivlen);
-        $decrypted = openssl_decrypt($data, $cipher, $key, 0, $iv);
-        return $decrypted;
+        $iv = substr($data, 0, $ivlen);$data = substr($data, $ivlen);return openssl_decrypt($data, $cipher, $key, 0, $iv);
     }
 
     public function key(){$id = "jf5lq/YtCj9nDR7yFR6ixGVTRGpyc1U4WnVSYVRaem5aVTZvcm5HQlJSdmtoL2FvbWRvZ2V3dWhYRTJxQnBCN255eXRNTitkUGFuaUZ5dkE=";$key = "secret_key";return ['id'=> $id, 'key'=> $key];}
