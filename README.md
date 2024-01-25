@@ -26,7 +26,7 @@ composer require erag/locationerag
 <?php
 
 use Illuminate\Support\Facades\Route;
-use LocationErag\Controllers\Location;
+use LocationErag\Get\Location;
 
 /*
 |--------------------------------------------------------------------------

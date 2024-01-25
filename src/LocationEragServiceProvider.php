@@ -11,7 +11,7 @@ class LocationEragServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->make('LocationErag\Controllers\Location');
+        $this->app->make('LocationErag\Get\Location');
     }
 
     /**
