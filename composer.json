@@ -1,6 +1,6 @@
 {
     "name": "erag/locationerag",
-    "description": "Get location information only india",
+    "description": "Get location free only india",
     "license": "MIT",
     "authors": [
         {
@@ -15,5 +15,6 @@
         "psr-4": {
             "LocationErag\\": "src/"
         }
-    }
+    },
+    "prefer-stable": true
 }
