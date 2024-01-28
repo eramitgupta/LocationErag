@@ -23,6 +23,7 @@ composer require erag/locationerag
 ```
 
 ```bash
+
 <?php
 
 use Illuminate\Support\Facades\Route;

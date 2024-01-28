@@ -1,6 +1,6 @@
 <?php
 
-namespace LocationErag\Controllers;
+namespace LocationErag\Get;
 
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Exception\RequestException;
