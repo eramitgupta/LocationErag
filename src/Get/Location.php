@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use GuzzleHttp\Exception\RequestException;
 use Illuminate\Support\Facades\Http;
 
-class Get extends Controller
+class Location extends Controller
 {
 
     public static function MapData($pincode)
