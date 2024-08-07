@@ -4,36 +4,42 @@ namespace LocationErag\Get;
 
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Exception\RequestException;
-use Illuminate\Support\Facades\Http;
+use LocationErag\Services\LocationServices;
 
 class Location extends Controller
 {
-
-    public static function MapData($pincode)
+    public static function MapData(int $pincode)
     {
-        $locationErag = new Location();
         try {
-            $response = Http::get($locationErag->buildData($locationErag->key()['id'], $locationErag->key()['key']) . $pincode);
+            $response = self::getLocationData($pincode);
             if ($response->successful()) {
-                return $response->json();
+                return LocationServices::processSuccessfulResponse($response);
             } else {
-                // Handle non-successful response, e.g., return an error response or log the error
-                return ['PostOffice' => [], 'Status' => 'Failure', 'Message' => 'Zip Code is not correct'];
+                return self::handleNonSuccessfulResponse();
             }
         } catch (RequestException $e) {
-            // Handle request-related exceptions
-            return ['PostOffice' => [], 'Status' => 'Failure', 'Message' => 'Failed the request'];
+            return self::handleRequestException();
         } catch (\Exception $e) {
-            // Handle other unexpected exceptions
-            return ['PostOffice' => [], 'Status' => 'Failure', 'Message' => 'An unexpected error occurred'];
+            return self::handleGeneralException();
         }
     }
-
-    public function buildData($data, $key)
+    private static function handleNonSuccessfulResponse() : array
     {
-        $cipher = "aes-256-cbc";$data = base64_decode($data);
-        $ivlen = openssl_cipher_iv_length($cipher); $iv = substr($data, 0, $ivlen);$data = substr($data, $ivlen);return openssl_decrypt($data, $cipher, $key, 0, $iv);
+        return ['data' => [], 'Status' => 'Failure', 'Message' => 'Zip Code is not correct'];
     }
 
-    public function key(){$id = "jf5lq/YtCj9nDR7yFR6ixGVTRGpyc1U4WnVSYVRaem5aVTZvcm5HQlJSdmtoL2FvbWRvZ2V3dWhYRTJxQnBCN255eXRNTitkUGFuaUZ5dkE=";$key = "secret_key";return ['id'=> $id, 'key'=> $key];}
+    private static function handleRequestException(): array
+    {
+        return ['data' => [], 'Status' => 'Failure', 'Message' => 'Failed the request'];
+    }
+
+    private static function getLocationData(int $pincode)
+    {
+        return LocationServices::dataBindRequest(LocationServices::buildData(LocationServices::key()['id'], LocationServices::key()['key']) . $pincode);
+    }
+
+    private static function handleGeneralException(): array
+    {
+        return ['data' => [], 'Status' => 'Failure', 'Message' => 'An unexpected error occurred'];
+    }
 }
