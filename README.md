@@ -14,7 +14,9 @@ Explore Indian locations effortlessly using our software, Locationerag. Simply a
   </a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/eramitgupta/files/main/locationerag.gif)
+
+<img width="1470" alt="Screenshot 2024-08-07 at 11 32 57 PM" src="https://github.com/user-attachments/assets/b3d82b4e-e1c0-434c-8356-5affa9d3b583">
+
 
 ## Getting Started
 
@@ -41,9 +43,8 @@ use LocationErag\Get\Location;
 */
 
 Route::get('/', function () {
-    $LocationErag = new Location();
     echo '<pre>';
-    print_r($LocationErag::MapData('226010'));
+    print_r(Location::MapData(226010));
 });
 ```
 ## License
