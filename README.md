@@ -1,5 +1,5 @@
 
-## Get location Free only india
+## Get Location Free Only india
 
 Explore Indian locations effortlessly using our software, Locationerag. Simply add a PIN code as a parameter, and instantly get an array of the entire area of INDIA. It's a quick and easy way to find locations – simplify your searches with Locationerag
 
