@@ -4,6 +4,26 @@
 Explore Indian locations effortlessly using our software, Locationerag. Simply add a PIN code as a parameter, and instantly get an array of the entire area of INDIA. It's a quick and easy way to find locations – simplify your searches with Locationerag
 
 
+### Step 1: Register Service Provider
+
+#### Laravel 11.x  
+Ensure the service provider is registered in `/bootstrap/providers.php`:
+```php
+return [
+    // ...
+    LocationEragServiceProvider::class
+];
+```
+
+#### Laravel 10.x  
+Add the service provider in `config/app.php`:
+```php
+'providers' => [
+    // ...
+    LaravelSetupLayout\LocationEragServiceProvider::class,
+];
+```
+
 <p align="center">
   <a href="https://paypal.me/teamdevgeek">
     <img src="https://github.com/eramitgupta/server-commands/blob/main/%24-donate-ff69b4.svg">
