@@ -25,11 +25,6 @@ Explore Indian locations effortlessly using our software, Locationerag. Simply a
 composer require erag/locationerag
 ```
 
-```
-
-
-
-
 ### Step 1: Register Service Provider
 
 #### Laravel 11.x  
