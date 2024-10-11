@@ -20,7 +20,7 @@ Add the service provider in `config/app.php`:
 ```php
 'providers' => [
     // ...
-    LaravelSetupLayout\LocationEragServiceProvider::class,
+    LocationErag\LocationEragServiceProvider::class,
 ];
 ```
 
