@@ -25,7 +25,7 @@ Explore Indian locations effortlessly using our software, Locationerag. Simply a
 composer require erag/locationerag
 ```
 
-```bash
+```
 
 
 
@@ -50,6 +50,7 @@ Add the service provider in `config/app.php`:
 ];
 ```
 
+```bash
 
 <?php
 
@@ -72,6 +73,7 @@ Route::get('/', function () {
     print_r(Location::MapData(226010));
 });
 ```
+
 ## License
 
 The MIT License (MIT). Please see License File for more information.
