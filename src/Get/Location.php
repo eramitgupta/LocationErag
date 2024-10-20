@@ -8,7 +8,7 @@ use LocationErag\Services\LocationServices;
 
 class Location extends Controller
 {
-    public static function MapData(int $pincode)
+    public static function MapData(int $pincode): array
     {
         try {
             $response = self::getLocationData($pincode);
@@ -23,7 +23,8 @@ class Location extends Controller
             return self::handleGeneralException();
         }
     }
-    private static function handleNonSuccessfulResponse() : array
+
+    private static function handleNonSuccessfulResponse(): array
     {
         return ['data' => [], 'Status' => 'Failure', 'Message' => 'Zip Code is not correct'];
     }
@@ -35,7 +36,7 @@ class Location extends Controller
 
     private static function getLocationData(int $pincode)
     {
-        return LocationServices::dataBindRequest(LocationServices::buildData(LocationServices::key()['id'], LocationServices::key()['key']) . $pincode);
+        return LocationServices::dataBindRequest(LocationServices::buildData(LocationServices::key()['id'], LocationServices::key()['key']).$pincode);
     }
 
     private static function handleGeneralException(): array
