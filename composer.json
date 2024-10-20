@@ -1,13 +1,23 @@
 {
     "name": "erag/locationerag",
-    "description": "Get location free only india",
+    "description": "A simple package to get location data using Indian PIN codes, optimized for Laravel 10.x and 11.x",
     "license": "MIT",
+    "keywords": [
+        "laravel",
+        "location",
+        "india",
+        "pincode",
+        "geolocation",
+        "location finder",
+        "indian pincode location"
+    ],
     "authors": [
         {
-            "name": "Er Amiit Gupta",
+            "name": "Er Amit Gupta",
             "email": "info.eramitgupta@gmail.com"
         }
     ],
+    "homepage": "https://github.com/eramitgupta/locationerag",
     "require": {
         "php": ">=8.0.0"
     },
@@ -16,5 +26,12 @@
             "LocationErag\\": "src/"
         }
     },
-    "prefer-stable": true
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LocationErag\\LocationEragServiceProvider"
+            ]
+        }
+    }
 }
